@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.servlet.ViewResolver;
 
-@Configuration
+//@Configuration
 public class MustacheConfig {
 
     @Bean
