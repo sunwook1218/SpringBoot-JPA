@@ -1,20 +1,20 @@
 package com.example.demo.scheduled._0sample;
 
+import lombok.RequiredArgsConstructor;
 import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
 @Component
+@RequiredArgsConstructor
 public class ManuallyAddedJobConfig {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
-    private Scheduler scheduler;
+    private final Scheduler scheduler;
 
     @PostConstruct
     public void addJob() {
