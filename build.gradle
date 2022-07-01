@@ -43,6 +43,9 @@ dependencies {
 	implementation group: 'io.netty', name: 'netty-all', version: '4.1.78.Final'
 	implementation group: 'com.google.guava', name: 'guava', version: '30.1.1-jre'
 
+	implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+	testImplementation group: 'com.h2database', name: 'h2', version: '1.4.200'
+
 }
 
 tasks.named('test') {
