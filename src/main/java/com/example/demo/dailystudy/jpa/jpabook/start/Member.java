@@ -3,6 +3,7 @@ package com.example.demo.dailystudy.jpa.jpabook.start;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
@@ -13,9 +14,21 @@ public class Member {
     @Column(name = "ID")
     private String id;
 
-    @Column(name = "NAME")
+    @Column(name = "NAME", nullable = false, length = 10)
     private String userName;
 
     private Integer age;
+
+    @Enumerated(EnumType.STRING)
+    private RoleType roleType;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdDate;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastModifiedDate;
+
+    @Lob
+    private String description;
 
 }
